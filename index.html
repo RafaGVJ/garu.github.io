@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafa | Game Developer</title>
+    <title>Garu | Game Developer</title>
 
-    <!-- Fonte -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
-            background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
-            color: white;
+            background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
+            color: #eaeaea;
             font-family: 'Inter', sans-serif;
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             font-family: 'Cinzel', serif;
-            letter-spacing: 4px;
+            letter-spacing: 3px;
         }
 
         section {
-            padding: 80px 20px;
+            padding: 90px 20px;
             max-width: 1000px;
             margin: auto;
         }
@@ -30,45 +30,66 @@
         /* HERO */
         .hero {
             text-align: center;
-            padding: 140px 20px;
+            padding: 160px 20px;
+            position: relative;
         }
 
         .hero h1 {
-            font-size: 100px;
+            font-size: 110px;
             margin: 0;
+            letter-spacing: 8px;
+            text-shadow: 0 0 20px rgba(255,255,255,0.08);
         }
 
         .hero p {
-            font-size: 22px;
+            font-size: 18px;
             color: #aaa;
+            margin-top: 10px;
         }
 
-        .hero-img {
-            width: 220px;
-            margin-top: 40px;
-            filter: grayscale(100%) contrast(120%);
+        .hero-sub {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #777;
         }
 
-        /* PROJECTS */
-        .projects h2 {
-            margin-bottom: 30px;
-        }
-
-        .card {
-            border: 1px solid #333;
+        /* NAV */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
+            position: sticky;
+            top: 0;
+            background: rgba(10,10,10,0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #222;
+        }
+
+        nav a {
+            color: #bbb;
+            text-decoration: none;
+            font-size: 14px;
             transition: 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #666;
+        nav a:hover {
+            color: white;
         }
 
-        .card h3 {
-            margin-top: 0;
+        /* CARDS */
+        .card {
+            border: 1px solid #2a2a2a;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 12px;
+            transition: 0.3s;
+            background: rgba(255,255,255,0.02);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #555;
         }
 
         .card p {
@@ -78,76 +99,66 @@
         /* ABOUT */
         .about p {
             color: #ccc;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         /* FOOTER */
         .footer {
             text-align: center;
-            padding: 40px 20px;
-            color: #777;
-            font-size: 14px;
+            padding: 50px 20px;
+            color: #666;
+            font-size: 13px;
         }
 
+        /* glow accent */
+        .accent {
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
 
+    <!-- NAV -->
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <!-- HERO -->
     <section class="hero">
-        <h1>RAFA</h1>
-        <p>Game Developer & Animation</p>
-
-        <!-- Opcional: adiciona tua imagem -->
-        <!-- <img src="assets/character.png" class="hero-img"> -->
+        <h1>GARU</h1>
+        <p>Rafael Guerreiro — Game Developer & Animator</p>
     </section>
 
     <!-- PROJECTS -->
-    <section class="projects">
+    <section id="projects">
         <h2>Projects</h2>
 
         <div class="card">
-            <h3>Dialogue & Quest System</h3>
-            <p>Branching dialogue system with quest integration and save/load functionality in Unity.</p>
+            <h3>Animation Work</h3>
+            <p>Cinematic and gameplay animations designed for immersive player experience.</p>
         </div>
-
-        <div class="card">
-            <h3>Combat System</h3>
-            <p>Player combat mechanics including attack, hit detection, and responsive feedback.</p>
-        </div>
-
-        <div class="card">
-            <h3>UI & Event Architecture</h3>
-            <p>Event-driven UI system using Observer Pattern for clean and scalable design.</p>
-        </div>
-
-        <div class="card">
-            <h3>Animation Showreel</h3>
-            <p>Game-ready animations and cinematic sequences created for interactive experiences.</p>
-        </div>
-
     </section>
 
     <!-- ABOUT -->
-    <section class="about">
-        <h2>About Me</h2>
+    <section id="about" class="about">
+        <h2>About</h2>
         <p>
-            I am a creative and curious game developer focused on gameplay systems,
-            UI architecture and animation for games. I enjoy building immersive
-            experiences that combine strong technical systems with visual storytelling.
+              I am <span class="accent">Garu</span>, a game developer and animator focused on creating immersive worlds through animation and interactive storytelling. I enjoy shaping gameplay experiences where animation, design and mechanics come together to build living, atmospheric worlds.
         </p>
     </section>
 
     <!-- CONTACT -->
-    <section class="contact">
+    <section id="contact">
         <h2>Contact</h2>
-        <p>Email: your@email.com</p>
-        <p>LinkedIn: your-linkedin</p>
+        <p>Email: rafaelguerreiro.exe@gmail.com</p>
+        <p>LinkedIn: https://www.linkedin.com/in/rafael-guerreiro-gamedev-anim/</p>
     </section>
 
     <!-- FOOTER -->
     <div class="footer">
-        © 2026 Rafa — Game Developer Portfolio
+        © 2026 Garu — Rafael Guerreiro | Game Developer & Animator
     </div>
 
 </body>
