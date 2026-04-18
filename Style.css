@@ -1,25 +1,28 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #111;
+    background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
     color: white;
-}
+body {
+    font-family: 'Cinzel', serif;
 
+}
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 140px 20px;
 }
 
 .hero h1 {
-    font-size: 80px;
+    font-size: 100px;
     margin: 0;
+    letter-spacing: 8px;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 22px;
     color: #aaa;
+    margin-top: 10px;
 }
-
 .projects, .about {
     padding: 60px 20px;
     max-width: 900px;
@@ -30,5 +33,11 @@ body {
     border: 1px solid #333;
     padding: 20px;
     margin: 20px 0;
-    border-radius: 8px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #666;
 }

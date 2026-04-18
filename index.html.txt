@@ -3,42 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rafa | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rafa | Game Developer</title>
+
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2 {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 4px;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 140px 20px;
+        }
+
+        .hero h1 {
+            font-size: 100px;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #aaa;
+        }
+
+        .hero-img {
+            width: 220px;
+            margin-top: 40px;
+            filter: grayscale(100%) contrast(120%);
+        }
+
+        /* PROJECTS */
+        .projects h2 {
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #666;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card p {
+            color: #bbb;
+        }
+
+        /* ABOUT */
+        .about p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #777;
+            font-size: 14px;
+        }
+
+    </style>
 </head>
 <body>
 
+    <!-- HERO -->
     <section class="hero">
         <h1>RAFA</h1>
         <p>Game Developer & Animation</p>
+
+        <!-- Opcional: adiciona tua imagem -->
+        <!-- <img src="assets/character.png" class="hero-img"> -->
     </section>
 
+    <!-- PROJECTS -->
     <section class="projects">
         <h2>Projects</h2>
 
         <div class="card">
-            <h3>Unity Dialogue System</h3>
-            <p>Quest and save system developed in Unity using C#.</p>
+            <h3>Dialogue & Quest System</h3>
+            <p>Branching dialogue system with quest integration and save/load functionality in Unity.</p>
         </div>
 
         <div class="card">
-            <h3>Player Combat System</h3>
-            <p>Combat, respawn and UI event architecture.</p>
+            <h3>Combat System</h3>
+            <p>Player combat mechanics including attack, hit detection, and responsive feedback.</p>
+        </div>
+
+        <div class="card">
+            <h3>UI & Event Architecture</h3>
+            <p>Event-driven UI system using Observer Pattern for clean and scalable design.</p>
         </div>
 
         <div class="card">
             <h3>Animation Showreel</h3>
-            <p>Game animation and cinematic work.</p>
+            <p>Game-ready animations and cinematic sequences created for interactive experiences.</p>
         </div>
+
     </section>
 
+    <!-- ABOUT -->
     <section class="about">
         <h2>About Me</h2>
         <p>
             I am a creative and curious game developer focused on gameplay systems,
-            UI architecture and animation for games.
+            UI architecture and animation for games. I enjoy building immersive
+            experiences that combine strong technical systems with visual storytelling.
         </p>
     </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: your@email.com</p>
+        <p>LinkedIn: your-linkedin</p>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 Rafa — Game Developer Portfolio
+    </div>
 
 </body>
 </html>
