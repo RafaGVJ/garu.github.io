@@ -205,18 +205,40 @@
 
     <!-- ========================= -->
     <!-- HOW TO PRESENT EACH GAME -->
-    <!-- Each project should include: -->
     <!-- 🎮 Title -->
     <!-- 🎥 Gameplay video -->
-    <!-- 🧠 What you did: programming / game design / level design -->
-    <!-- 🔊 Sound design: Audacity + in-game implementation -->
-    <!-- 🛠 Tools: Unity / Unreal / Audacity / Blender -->
+    <!-- 🧠 What you did -->
+    <!-- 🔊 Sound design -->
+    <!-- 🛠 Tools -->
     <!-- ========================= -->
+
+    <style>
+        .tags {
+            margin-top: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            margin: 3px;
+            font-size: 12px;
+            border: 1px solid #444;
+            border-radius: 20px;
+            color: #ccc;
+        }
+    </style>
 
     <!-- PROJECT 1 -->
     <div class="card">
         <h3>2D Platformer Prototype</h3>
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+
+        <div class="tags">
+            <span class="tag">Programming</span>
+            <span class="tag">Game Design</span>
+            <span class="tag">Level Design</span>
+        </div>
+
         <p>
             🧠 What I did: Programming, Game Design, Level Design<br>
             🔊 Sound design: Edited in Audacity and implemented in-game<br>
@@ -228,12 +250,17 @@
     <div class="card">
         <h3>Animation Showreel</h3>
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+
+        <div class="tags">
+            <span class="tag">Animation</span>
+            <span class="tag">Cinematic</span>
+            <span class="tag">Timing</span>
+        </div>
+
         <p>
-            🧠 What I did: Character Animation, Cinematic Timing
-            <br>
-            🔊 Sound design: Edited in Audacity and synced to animation
-            <br>
-            🛠 Tools: Blender, Unity (optional), Audacity
+            🧠 What I did: Character Animation, Cinematic Timing<br>
+            🔊 Sound design: Edited in Audacity and synced to animation<br>
+            🛠 Tools: Blender, Audacity
         </p>
     </div>
 
@@ -241,11 +268,16 @@
     <div class="card">
         <h3>Gameplay Animation System</h3>
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+
+        <div class="tags">
+            <span class="tag">Systems</span>
+            <span class="tag">Animation</span>
+            <span class="tag">Programming</span>
+        </div>
+
         <p>
-            🧠 What I did: Animation blending system, state machine logic
-            <br>
-            🔊 Sound design: In-game implementation and timing sync
-            <br>
+            🧠 What I did: Animation blending system, state machine logic<br>
+            🔊 Sound design: In-game implementation and timing sync<br>
             🛠 Tools: Unity, Animator Controller
         </p>
     </div>
@@ -254,11 +286,16 @@
     <div class="card">
         <h3>World Building Prototype</h3>
         <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe>
+
+        <div class="tags">
+            <span class="tag">World Building</span>
+            <span class="tag">Level Design</span>
+            <span class="tag">Lighting</span>
+        </div>
+
         <p>
-            🧠 What I did: Level Design, Environment Design, Lighting
-            <br>
-            🔊 Sound design: Ambient audio integration
-            <br>
+            🧠 What I did: Level Design, Environment Design, Lighting<br>
+            🔊 Sound design: Ambient audio integration<br>
             🛠 Tools: Unity / Unreal, Blender
         </p>
     </div>
@@ -280,16 +317,45 @@
 <!-- ========================= -->
 <section id="contact">
     <h2>Contact</h2>
-    <p>Email: rafaelguerreiro.exe@gmail.com</p>
-<p>
-    <a href="https://www.linkedin.com/in/rafael-guerreiro-gamedev-anim/" target="_blank">
-        🔗 LinkedIn
-    </a>
-</p>
-    
 
-    <!-- BACK TO TOP BUTTON -->
-    <a class="top-btn" href="#top">Back to Top ↑</a>
+    <style>
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            margin: 8px 0;
+            border: 1px solid #444;
+            border-radius: 10px;
+            color: #eaeaea;
+            text-decoration: none;
+            transition: 0.3s;
+            background: rgba(255,255,255,0.03);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            border-color: #777;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .contact-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+
+    <div class="contact-wrap">
+        <a class="contact-btn" href="mailto:rafaelguerreiro.exe@gmail.com">
+            📧 Email: rafaelguerreiro.exe@gmail.com
+        </a>
+
+        <a class="contact-btn" href="https://www.linkedin.com/in/rafael-guerreiro-gamedev-anim/" target="_blank">
+            🔗 LinkedIn
+        </a>
+    </div>
 </section>
 
 <!-- FOOTER -->
