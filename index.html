@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garu | Game Developer</title>
 
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
     <style>
@@ -27,33 +26,9 @@
             margin: auto;
         }
 
-        /* HERO */
-        .hero {
-            text-align: center;
-            padding: 160px 20px;
-            position: relative;
-        }
-
-        .hero h1 {
-            font-size: 110px;
-            margin: 0;
-            letter-spacing: 8px;
-            text-shadow: 0 0 20px rgba(255,255,255,0.08);
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: #aaa;
-            margin-top: 10px;
-        }
-
-        .hero-sub {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #777;
-        }
-
-        /* NAV */
+        /* ========================= */
+        /* NAVIGATION */
+        /* ========================= */
         nav {
             display: flex;
             justify-content: center;
@@ -70,33 +45,64 @@
             color: #bbb;
             text-decoration: none;
             font-size: 14px;
-            transition: 0.3s;
         }
 
         nav a:hover {
             color: white;
         }
 
-        /* CARDS */
+        /* ========================= */
+        /* HERO SECTION */
+        /* EDIT HERE: NAME + TAGLINE */
+        /* ========================= */
+        .hero {
+            text-align: center;
+            padding: 160px 20px;
+        }
+
+        .hero h1 {
+            font-size: 110px;
+            margin: 0;
+            letter-spacing: 8px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #aaa;
+        }
+
+        /* ========================= */
+        /* SHOWREEL SECTION */
+        /* EDIT HERE: YOUTUBE VIDEO ID */
+        /* ========================= */
+        #showreel iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        /* ========================= */
+        /* PROJECTS SECTION */
+        /* ADD NEW PROJECTS BELOW */
+        /* ========================= */
         .card {
             border: 1px solid #2a2a2a;
             padding: 20px;
             margin: 20px 0;
             border-radius: 12px;
-            transition: 0.3s;
             background: rgba(255,255,255,0.02);
         }
 
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: #555;
+        .card a {
+            color: white;
+            display: inline-block;
+            margin-top: 10px;
         }
 
-        .card p {
-            color: #bbb;
-        }
-
-        /* ABOUT */
+        /* ========================= */
+        /* ABOUT SECTION */
+        /* EDIT BIO HERE */
+        /* ========================= */
         .about p {
             color: #ccc;
             line-height: 1.7;
@@ -109,46 +115,84 @@
             color: #666;
             font-size: 13px;
         }
-
-        /* glow accent */
-        .accent {
-            color: #ffffff;
-        }
     </style>
 </head>
 <body>
 
-    <!-- NAV -->
-    <nav>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<!-- ========================= -->
+<!-- NAV -->
+<!-- ========================= -->
+<nav>
+    <a href="#showreel">Showreel</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>GARU</h1>
-        <p>Rafael Guerreiro — Game Developer & Animator</p>
-    </section>
+<!-- ========================= -->
+<!-- HERO -->
+<!-- EDIT NAME + BRAND HERE -->
+<!-- ========================= -->
+<section class="hero">
+    <h1>GARU</h1>
+    <p>Rafa — Game Developer & Animator</p>
+</section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <h2>Projects</h2>
+<!-- ========================= -->
+<!-- SHOWREEL -->
+<!-- REPLACE VIDEO ID -->
+<!-- ========================= -->
+<section id="showreel">
+    <h2>Showreel</h2>
 
-        <div class="card">
-            <h3>Animation Work</h3>
-            <p>Cinematic and gameplay animations designed for immersive player experience.</p>
-        </div>
-    </section>
+    <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID" allowfullscreen></iframe>
+</section>
 
-    <!-- ABOUT -->
-    <section id="about" class="about">
-        <h2>About</h2>
-        <p>
-              I am <span class="accent">Garu</span>, a game developer and animator focused on creating immersive worlds through animation and interactive storytelling. I enjoy shaping gameplay experiences where animation, design and mechanics come together to build living, atmospheric worlds.
-        </p>
-    </section>
+<!-- ========================= -->
+<!-- PROJECTS -->
+<!-- DUPLICATE CARD TO ADD PROJECTS -->
+<!-- ========================= -->
+<section id="projects">
+    <h2>Projects</h2>
 
+    <!-- PROJECT TEMPLATE -->
+    <div class="card">
+        <h3>2D Platformer Prototype</h3>
+        <p>Core gameplay prototype focused on movement, jumping, and responsive platforming mechanics built in Unity.</p>
+        <a href="#">View Demo</a>
+    </div>
+
+    <div class="card">
+        <h3>Animation Showreel</h3>
+        <p>Collection of gameplay and cinematic animations focused on character motion, timing, and expressiveness.</p>
+        <a href="#">Watch Reel</a>
+    </div>
+
+    <div class="card">
+        <h3>Gameplay Animation System</h3>
+        <p>System focused on blending animations for smooth transitions between movement, idle, and action states.</p>
+        <a href="#">View Project</a>
+    </div>
+
+    <div class="card">
+        <h3>World Building Prototype</h3>
+        <p>Early prototype focused on creating immersive environments and atmosphere for interactive worlds.</p>
+        <a href="#">View Project</a>
+    </div>
+</section>
+
+<!-- ========================= -->
+<!-- ABOUT -->
+<!-- EDIT BIO HERE -->
+<!-- ========================= -->
+<section id="about" class="about">
+    <h2>About</h2>
+    <p>
+        I am Garu, a game developer and animator focused on creating immersive worlds through animation and interactive storytelling.
+        I enjoy building gameplay systems and expressive animation that bring environments and characters to life.
+    </p>
+</section>
+    
     <!-- CONTACT -->
     <section id="contact">
         <h2>Contact</h2>
