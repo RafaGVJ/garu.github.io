@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garu | Game Developer</title>
 
+    <!-- ========================= -->
+    <!-- FONTS -->
+    <!-- ========================= -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
     <style>
+        /* ========================= */
+        /* GLOBAL STYLE */
+        /* ========================= */
         body {
             margin: 0;
             background: radial-gradient(circle at top, #1a1a1a, #0b0b0b);
             color: #eaeaea;
             font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
         }
 
         h1, h2, h3 {
@@ -24,6 +31,24 @@
             padding: 90px 20px;
             max-width: 1000px;
             margin: auto;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* ========================= */
+        /* ANIMATIONS */
+        /* ========================= */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0%,100% { text-shadow: 0 0 10px rgba(255,255,255,0.05); }
+            50% { text-shadow: 0 0 25px rgba(255,255,255,0.15); }
         }
 
         /* ========================= */
@@ -45,6 +70,7 @@
             color: #bbb;
             text-decoration: none;
             font-size: 14px;
+            transition: 0.3s;
         }
 
         nav a:hover {
@@ -53,7 +79,7 @@
 
         /* ========================= */
         /* HERO SECTION */
-        /* EDIT HERE: NAME + TAGLINE */
+        /* EDIT HERE: NAME + BRAND */
         /* ========================= */
         .hero {
             text-align: center;
@@ -64,6 +90,7 @@
             font-size: 110px;
             margin: 0;
             letter-spacing: 8px;
+            animation: glow 3s ease-in-out infinite;
         }
 
         .hero p {
@@ -75,15 +102,17 @@
         /* SHOWREEL SECTION */
         /* EDIT HERE: YOUTUBE VIDEO ID */
         /* ========================= */
-        #showreel iframe {
+        iframe {
             width: 100%;
-            height: 500px;
+            height: 250px;
+            border-radius: 10px;
+            margin-top: 10px;
             border: none;
         }
 
         /* ========================= */
         /* PROJECTS SECTION */
-        /* ADD NEW PROJECTS BELOW */
+        /* DUPLICATE CARD TO ADD PROJECTS */
         /* ========================= */
         .card {
             border: 1px solid #2a2a2a;
@@ -91,9 +120,16 @@
             margin: 20px 0;
             border-radius: 12px;
             background: rgba(255,255,255,0.02);
+            transition: 0.4s;
         }
 
-        .card a {
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #555;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        a {
             color: white;
             display: inline-block;
             margin-top: 10px;
@@ -108,7 +144,9 @@
             line-height: 1.7;
         }
 
+        /* ========================= */
         /* FOOTER */
+        /* ========================= */
         .footer {
             text-align: center;
             padding: 50px 20px;
@@ -131,7 +169,7 @@
 
 <!-- ========================= -->
 <!-- HERO -->
-<!-- EDIT NAME + BRAND HERE -->
+<!-- EDIT HERE -->
 <!-- ========================= -->
 <section class="hero">
     <h1>GARU</h1>
@@ -140,7 +178,7 @@
 
 <!-- ========================= -->
 <!-- SHOWREEL -->
-<!-- REPLACE VIDEO ID -->
+<!-- EDIT VIDEO ID -->
 <!-- ========================= -->
 <section id="showreel">
     <h2>Showreel</h2>
@@ -150,34 +188,37 @@
 
 <!-- ========================= -->
 <!-- PROJECTS -->
-<!-- DUPLICATE CARD TO ADD PROJECTS -->
+<!-- ADD NEW PROJECTS BY DUPLICATING CARD -->
 <!-- ========================= -->
 <section id="projects">
     <h2>Projects</h2>
 
-    <!-- PROJECT TEMPLATE -->
+    <!-- PROJECT 1 -->
     <div class="card">
         <h3>2D Platformer Prototype</h3>
-        <p>Core gameplay prototype focused on movement, jumping, and responsive platforming mechanics built in Unity.</p>
-        <a href="#">View Demo</a>
+        <p>Core movement and responsive gameplay mechanics.</p>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
     </div>
 
+    <!-- PROJECT 2 -->
     <div class="card">
         <h3>Animation Showreel</h3>
-        <p>Collection of gameplay and cinematic animations focused on character motion, timing, and expressiveness.</p>
-        <a href="#">Watch Reel</a>
+        <p>Gameplay and cinematic animation work.</p>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
     </div>
 
+    <!-- PROJECT 3 -->
     <div class="card">
         <h3>Gameplay Animation System</h3>
-        <p>System focused on blending animations for smooth transitions between movement, idle, and action states.</p>
-        <a href="#">View Project</a>
+        <p>Animation blending and state transitions.</p>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
     </div>
 
+    <!-- PROJECT 4 -->
     <div class="card">
         <h3>World Building Prototype</h3>
-        <p>Early prototype focused on creating immersive environments and atmosphere for interactive worlds.</p>
-        <a href="#">View Project</a>
+        <p>Immersive environments focused on atmosphere.</p>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" allowfullscreen></iframe>
     </div>
 </section>
 
@@ -192,18 +233,20 @@
         I enjoy building gameplay systems and expressive animation that bring environments and characters to life.
     </p>
 </section>
-    
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: rafaelguerreiro.exe@gmail.com</p>
-        <p>LinkedIn: https://www.linkedin.com/in/rafael-guerreiro-gamedev-anim/</p>
-    </section>
 
-    <!-- FOOTER -->
-    <div class="footer">
-        © 2026 Garu — Rafael Guerreiro | Game Developer & Animator
-    </div>
+<!-- ========================= -->
+<!-- CONTACT -->
+<!-- ========================= -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: rafaelguerreiro.exe@gmail.com</p>
+    <p>LinkedIn: https://www.linkedin.com/in/rafael-guerreiro-gamedev-anim/</p>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Garu | Rafael Guerreiro — Game Developer & Animator
+</div>
 
 </body>
 </html>
