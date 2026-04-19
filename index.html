@@ -5,75 +5,142 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Garu | Game Developer</title>
 
-<!-- LINK PARA O CSS -->
-<link rel="stylesheet" href="Style.css">
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
 
-<!-- FONTES -->
+<!-- FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<nav>
-    <a href="#showreel">Showreel</a>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-</nav>
+<!-- ========================= -->
+<!-- 🎮 GAME MENU (HOME) -->
+<!-- ========================= -->
+<section class="game-menu">
 
-<section class="hero">
-    <h1>GARU</h1>
-    <p>Rafael Guerreiro — Game Developer & Animator</p>
+    <div class="menu-title">
+        GARU
+        <span>Game Developer • Animator</span>
+    </div>
+
+    <div class="menu-options">
+
+        <a href="#showreel" class="menu-item">▶ Start Showreel</a>
+        <a href="#projects" class="menu-item">⚔ Projects</a>
+        <a href="#about" class="menu-item">✦ About</a>
+        <a href="#contact" class="menu-item">☍ Contact</a>
+
+    </div>
+
 </section>
 
+<!-- ========================= -->
+<!-- SHOWREEL -->
+<!-- ========================= -->
 <section id="showreel">
     <h2>Showreel</h2>
+
     <div class="card">
-        <iframe src="https://www.youtube.com/embed/SEU_SHOWREEL_ID"></iframe>
+        <iframe src="https://www.youtube.com/embed/SEU_SHOWREEL_ID" allowfullscreen></iframe>
     </div>
 </section>
 
+<!-- ========================= -->
+<!-- PROJECTS -->
+<!-- ========================= -->
 <section id="projects">
 <h2>Projects</h2>
 
 <div class="card">
     <h3>2D Platformer Prototype</h3>
-    <iframe src="https://www.youtube.com/embed/BGmOsk9fCFk"></iframe>
+    <iframe src="https://www.youtube.com/embed/BGmOsk9fCFk" allowfullscreen></iframe>
+
+    <div class="tags">
+        <span class="tag">Programming</span>
+        <span class="tag">Game Design</span>
+        <span class="tag">Level Design</span>
+    </div>
+
+    <p>Unity, C#, Audacity</p>
 </div>
 
 <div class="card">
     <h3>Jester</h3>
-    <iframe src="https://www.youtube.com/embed/fC5_dm4_tV8"></iframe>
+    <iframe src="https://www.youtube.com/embed/fC5_dm4_tV8" allowfullscreen></iframe>
+
+    <div class="tags">
+        <span class="tag">Sound Designer</span>
+        <span class="tag">Game Designer</span>
+        <span class="tag">Programming</span>
+    </div>
+
+    <p>Unity, C#, Audacity</p>
+</div>
+
+<div class="card">
+    <h3>V1rus</h3>
+    <iframe src="https://www.youtube.com/embed/ZoPqvpx9r8w" allowfullscreen></iframe>
+
+    <div class="tags">
+        <span class="tag">Sound Designer</span>
+    </div>
+
+    <p>Audacity</p>
 </div>
 
 </section>
 
+<!-- ========================= -->
+<!-- ABOUT -->
+<!-- ========================= -->
 <section id="about">
 <h2>About</h2>
-<p>Game developer and animator focused on immersive worlds and gameplay systems.</p>
+
+<div class="card">
+    <p>
+        Game developer and animator focused on immersive worlds, gameplay systems
+        and expressive animation. I enjoy building experiences that feel alive and interactive.
+    </p>
+</div>
+
 </section>
 
+<!-- ========================= -->
+<!-- CONTACT -->
+<!-- ========================= -->
 <section id="contact">
 <h2>Contact</h2>
 
 <div class="contact-poster">
-    <div>✦ SEEK THE CREATOR ✦</div>
 
-    <div>📧 rafaelguerreiro.exe@gmail.com</div>
+    <div class="contact-title">✦ SEEK THE CREATOR ✦</div>
 
-    <div>
-        🔗 <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+    <div class="contact-item">
+        📧 rafaelguerreiro.exe@gmail.com
     </div>
 
-    <div>
-        🔗 <a href="https://itch.io/" target="_blank">Itch.io</a>
+    <div class="contact-item">
+        🔗 <a href="https://www.linkedin.com/in/rafael-guerreiro-gamedev-anim/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+        </a>
     </div>
+
+    <div class="contact-item">
+        🔗 <a href="https://garu-rg.itch.io/" target="_blank" rel="noopener noreferrer">
+            Itch.io
+        </a>
+    </div>
+
 </div>
 
 </section>
 
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
 <div class="footer">
-© 2026 Garu
+© 2026 Garu — Game Developer & Animator
 </div>
 
 </body>
