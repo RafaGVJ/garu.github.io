@@ -5,20 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Garu | Game Developer</title>
 
-<!-- ========================= -->
-<!-- FONTS (Google Fonts) -->
-<!-- Cinzel = estilo medieval -->
-<!-- Inter = texto moderno limpo -->
-<!-- ========================= -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-
 /* ========================= */
 /* BASE DO SITE */
 /* ========================= */
 html {
-    scroll-behavior: smooth; /* scroll suave nos links do menu */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -28,68 +22,48 @@ body {
     overflow-x: hidden;
     padding-top: 70px;
 
-    /* 🎨 FUNDO MEDIEVAL (IMPORTANTE PARA ATMOSFERA) */
     background: radial-gradient(
         ellipse at top,
-        #1c1612 0%,   /* castanho quente (luz medieval) */
-        #0d0b09 55%,  /* zona intermédia */
-        #060504 100%  /* sombras profundas */
+        #1c1612 0%,
+        #0d0b09 55%,
+        #060504 100%
     );
 }
 
-/* 💡 LUZ AMBIENTE (efeito de vela / luz de castelo) */
+/* LUZ AMBIENTE */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     background: radial-gradient(
         circle at 50% 30%,
-        rgba(255, 200, 140, 0.10), /* luz quente */
+        rgba(255, 200, 140, 0.10),
         transparent 60%
     );
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
 }
 
-/* ========================= */
+/* CONTENT ABOVE OVERLAY */
+section, nav, .hero, .card, .contact-poster {
+    position: relative;
+    z-index: 2;
+}
+
 /* TIPOGRAFIA */
-/* ========================= */
 h1, h2, h3 {
     font-family: 'Cinzel', serif;
     letter-spacing: 3px;
 }
 
-/* ========================= */
-/* SECÇÕES GERAIS */
-/* ========================= */
+/* SECTIONS */
 section {
     padding: 90px 20px;
     max-width: 1000px;
     margin: auto;
-
-    /* animação de entrada */
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeIn 1s ease forwards;
 }
 
-/* animação quando a secção aparece */
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* glow do título principal */
-@keyframes glow {
-    0%,100% { text-shadow: 0 0 10px rgba(255,255,255,0.05); }
-    50% { text-shadow: 0 0 25px rgba(255,255,255,0.15); }
-}
-
-/* ========================= */
-/* NAVBAR FIXA */
-/* ========================= */
+/* NAV */
 nav {
     display: flex;
     justify-content: center;
@@ -97,10 +71,9 @@ nav {
 
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-
     padding: 20px;
+
     background: rgba(10,10,10,0.85);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #222;
@@ -117,9 +90,7 @@ nav a:hover {
     color: white;
 }
 
-/* ========================= */
-/* HERO (primeira impressão) */
-/* ========================= */
+/* HERO */
 .hero {
     text-align: center;
     padding: 160px 20px;
@@ -129,7 +100,6 @@ nav a:hover {
     font-size: 110px;
     margin: 0;
     letter-spacing: 8px;
-    animation: glow 3s ease-in-out infinite; /* efeito mágico */
 }
 
 .hero p {
@@ -137,9 +107,7 @@ nav a:hover {
     color: #aaa;
 }
 
-/* ========================= */
-/* PROJETOS (cards) */
-/* ========================= */
+/* CARDS */
 .card {
     border: 1px solid #2a2a2a;
     padding: 20px;
@@ -149,18 +117,13 @@ nav a:hover {
     transition: 0.4s;
 }
 
-/* hover = sensação de profundidade */
 .card:hover {
     transform: translateY(-8px);
     border-color: #555;
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* tags dos projetos */
-.tags {
-    margin-top: 10px;
-}
-
+/* TAGS */
 .tag {
     display: inline-block;
     padding: 4px 10px;
@@ -171,93 +134,31 @@ nav a:hover {
     color: #ccc;
 }
 
-/* ========================= */
-/* CONTACT (estilo pergaminho medieval) */
-/* ========================= */
+/* CONTACT */
 .contact-poster {
     margin-top: 20px;
     padding: 25px;
-
     border: 2px solid #5a4a2f;
     border-radius: 12px;
-
-    /* textura tipo papel antigo */
     background: linear-gradient(135deg, rgba(40,30,20,0.8), rgba(15,10,5,0.9));
-
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
     position: relative;
-    overflow: hidden;
 }
 
-/* textura subtil dentro do poster */
-.contact-poster::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05), transparent 60%),
-        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.03), transparent 60%);
-
-    pointer-events: none;
+/* LINKS */
+.contact-item a {
+    color: #d6c7a1;
+    text-decoration: none;
+    border-bottom: 1px dashed #a58b5f;
+    transition: 0.3s;
+    display: inline-block;
 }
 
-/* título estilo medieval */
-.contact-title {
-    font-family: 'Cinzel', serif;
-    letter-spacing: 4px;
-    color: #e6d3a3;
-    margin-bottom: 15px;
+.contact-item a:hover {
+    color: #fff;
+    transform: translateX(3px);
 }
 
-/* texto do contacto */
-.contact-item {
-    margin: 12px 0;
-    font-size: 15px;
-    color: #ddd;
-}
-
-/* ========================= */
-/* POEIRA (efeito ambiente) */
-/* ========================= */
-.particles {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 0;
-}
-
-/* partícula individual */
-.particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-
-    /* 🔥 IMPORTANTE: cor quente para ser visível no escuro */
-    background: rgba(255, 220, 180, 0.35);
-
-    border-radius: 50%;
-    box-shadow: 0 0 6px rgba(255, 200, 140, 0.25);
-
-    filter: blur(0.3px);
-    animation: floatUp linear infinite;
-}
-
-/* movimento da poeira */
-@keyframes floatUp {
-    from {
-        transform: translateY(100vh);
-        opacity: 0;
-    }
-    10% { opacity: 0.5; }
-    100% {
-        transform: translateY(-10vh) translateX(20px);
-        opacity: 0;
-    }
-}
-
-/* footer simples */
+/* FOOTER */
 .footer {
     text-align: center;
     padding: 50px 20px;
@@ -265,22 +166,18 @@ nav a:hover {
     font-size: 13px;
 }
 
-/* vídeos */
+/* VIDEO */
 iframe {
     width: 100%;
     height: 250px;
     border-radius: 10px;
     border: none;
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- ========================= -->
-<!-- NAVIGATION -->
-<!-- ========================= -->
 <nav>
     <a href="#showreel">Showreel</a>
     <a href="#projects">Projects</a>
@@ -288,133 +185,82 @@ iframe {
     <a href="#contact">Contact</a>
 </nav>
 
-<!-- ========================= -->
-<!-- HERO (primeira impressão) -->
-<!-- ========================= -->
 <section class="hero">
     <h1>GARU</h1>
     <p>Rafael Guerreiro — Game Developer & Animator</p>
 </section>
 
-<!-- ========================= -->
-<!-- SHOWREEL -->
-<!-- ========================= -->
 <section id="showreel">
     <h2>Showreel</h2>
-    <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID"></iframe>
+    <iframe src="https://www.youtube.com/embed/BGmOsk9fCFk" allowfullscreen></iframe>
 </section>
 
-<!-- ========================= -->
-<!-- PROJECTS -->
-<!-- ========================= -->
 <section id="projects">
 <h2>Projects</h2>
-<!-- Platformer -->
+
 <div class="card">
     <h3>2D Platformer Prototype</h3>
-<iframe
-    src="https://www.youtube.com/embed/BGmOsk9fCFk"
-    allowfullscreen
-    loading="lazy">
-</iframe>
-
+    <iframe src="https://www.youtube.com/embed/BGmOsk9fCFk" allowfullscreen></iframe>
     <div class="tags">
         <span class="tag">Programming</span>
         <span class="tag">Game Design</span>
         <span class="tag">Level Design</span>
     </div>
-
-    <p>Unity, C#, Audacity</p>
-    <!-- Jester -->
+    <p>Tools: Unity, C#, Audacity</p>
 </div>
-    <div class="card">
+
+<div class="card">
     <h3>Jester</h3>
-<iframe
-    src="https://www.youtube.com/embed/fC5_dm4_tV8"
-    allowfullscreen
-    loading="lazy">
-</iframe>
-
+    <iframe src="https://www.youtube.com/embed/fC5_dm4_tV8" allowfullscreen></iframe>
     <div class="tags">
-        <span class="tag"> Sound Designer</span>
+        <span class="tag">Sound Designer</span>
         <span class="tag">Assistant Programmer</span>
-        <span class="tag">Assistant Game Designer</span>      
+        <span class="tag">Game Designer</span>
     </div>
-
-    <p>Unity, C#, Audacity</p>
+    <p>Tools: Unity, C#, Audacity</p>
 </div>
-   <!-- V1rus -->
-    </div>
-    <div class="card">
+
+<div class="card">
     <h3>V1rus</h3>
-<iframe
-    src="https://www.youtube.com/embed/ZoPqvpx9r8w"
-    allowfullscreen
-    loading="lazy">
-</iframe>
-
+    <iframe src="https://www.youtube.com/embed/ZoPqvpx9r8w" allowfullscreen></iframe>
     <div class="tags">
-        <span class="tag"> Sound Designer</span>
-      
+        <span class="tag">Sound Designer</span>
     </div>
-
-    <p> Audacity</p>
+    <p>Tools: Audacity</p>
 </div>
 
 </section>
 
-<!-- ========================= -->
-<!-- ABOUT -->
-<!-- ========================= -->
 <section id="about">
 <h2>About</h2>
-<p>
-Game developer and animator focused on immersive worlds and gameplay systems.
-</p>
+<p>Game developer and animator focused on immersive worlds and gameplay systems.</p>
 </section>
 
-<!-- ========================= -->
-<!-- CONTACT -->
-<!-- ========================= -->
 <section id="contact">
 <h2>Contact</h2>
 
 <div class="contact-poster">
-    <div class="contact-title">✦ SEEK THE CREATOR ✦</div>
+    <div>✦ SEEK THE CREATOR ✦</div>
 
-    <div class="contact-item">📧 rafaelguerreiro.exe@gmail.com</div>
-  <div class="contact-item">
-    🔗 <a href="https://www.linkedin.com/in/rafael-guerreiro-gamedev-anim/" target="_blank">
+    <div class="contact-item">📧 email: rafaelguerreiro.exe@gmail.com</div>
+
+    <div class="contact-item">
+        🔗 <a href="https://www.linkedin.com/in/rafael-guerreiro-gamedev-anim/" target="_blank" rel="noopener noreferrer">
         LinkedIn
-    </a>
-</div>
+        </a>
+    </div>
 
-<div class="contact-item">
-    🔗 <a href="https://garu-rg.itch.io/" target="_blank">
+    <div class="contact-item">
+        🔗 <a href="https://garu-rg.itch.io/" target="_blank" rel="noopener noreferrer">
         Itch.io
-    </a>
-</div>
+        </a>
+    </div>
 </div>
 
 </section>
 
-<!-- ========================= -->
-<!-- FOOTER -->
-<!-- ========================= -->
 <div class="footer">
 © 2026 Garu — Game Developer & Animator
-</div>
-
-<!-- ========================= -->
-<!-- POEIRA VISUAL -->
-<!-- ========================= -->
-<div class="particles">
-    <div class="particle" style="left:10%; animation-duration:12s;"></div>
-    <div class="particle" style="left:20%; animation-duration:18s;"></div>
-    <div class="particle" style="left:35%; animation-duration:14s;"></div>
-    <div class="particle" style="left:50%; animation-duration:20s;"></div>
-    <div class="particle" style="left:65%; animation-duration:16s;"></div>
-    <div class="particle" style="left:80%; animation-duration:22s;"></div>
 </div>
 
 </body>
