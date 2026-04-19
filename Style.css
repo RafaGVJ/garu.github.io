@@ -1,3 +1,4 @@
+
 /* ========================= */
 /* BASE */
 /* ========================= */
@@ -19,7 +20,7 @@ body {
     );
 }
 
-/* LIGHT AMBIENT */
+/* luz ambiente */
 body::before {
     content: "";
     position: fixed;
@@ -33,8 +34,8 @@ body::before {
     z-index: 0;
 }
 
-/* garantir camadas corretas */
-section, nav, .game-menu, .card, .contact-poster {
+/* tudo acima do overlay */
+section, nav, .footer {
     position: relative;
     z-index: 2;
 }
@@ -48,7 +49,87 @@ h1, h2, h3 {
 }
 
 /* ========================= */
-/* NAVBAR */
+/* 🎮 GAME MENU (HERO FULL SCREEN) */
+/* ========================= */
+.game-menu {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(40,30,20,0.35) 0%,
+        rgba(10,8,6,0.95) 70%,
+        #050403 100%
+    );
+
+    overflow: hidden;
+}
+
+/* título principal */
+.menu-title {
+    font-family: 'Cinzel', serif;
+    font-size: 120px;
+    letter-spacing: 10px;
+    color: #e6d3a3;
+    text-shadow: 0 0 25px rgba(255,200,140,0.15);
+}
+
+/* subtítulo */
+.menu-title span {
+    display: block;
+    font-size: 16px;
+    color: #aaa;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+/* opções menu */
+.menu-options {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* item menu */
+.menu-item {
+    font-size: 18px;
+    color: #cfc0a0;
+    text-decoration: none;
+
+    padding: 10px 20px;
+    border: 1px solid transparent;
+
+    transition: 0.3s ease;
+    letter-spacing: 2px;
+}
+
+/* hover estilo jogo */
+.menu-item:hover {
+    color: #fff;
+    border: 1px solid #5a4a2f;
+    background: rgba(255,255,255,0.03);
+
+    transform: translateX(8px);
+    text-shadow: 0 0 10px rgba(255,220,150,0.4);
+}
+
+/* ========================= */
+/* SEÇÕES */
+/* ========================= */
+section {
+    padding: 90px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ========================= */
+/* NAV */
 /* ========================= */
 nav {
     display: flex;
@@ -70,116 +151,10 @@ nav a {
     color: #bbb;
     text-decoration: none;
     font-size: 14px;
-    transition: 0.3s;
 }
 
 nav a:hover {
     color: white;
-}
-
-/* ========================= */
-/* 🎮 GAME MENU (HOME RPG UI) */
-/* ========================= */
-.game-menu {
-    min-height: 100vh;   /* IMPORTANTE: evita quebra */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    padding: 80px 20px;
-}
-
-/* TITULO */
-.menu-title {
-    font-family: 'Cinzel', serif;
-    font-size: 70px;
-    letter-spacing: 10px;
-
-    color: #e6d3a3;
-
-    text-shadow:
-        0 0 10px rgba(255,200,140,0.15),
-        0 0 30px rgba(0,0,0,0.6);
-}
-
-.menu-title span {
-    display: block;
-    font-size: 14px;
-    letter-spacing: 4px;
-    color: #aaa;
-    margin-top: 10px;
-}
-
-/* MENU OPTIONS */
-.menu-options {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* MENU ITEM */
-.menu-item {
-    font-size: 20px;
-    color: #cfc6b2;
-    text-decoration: none;
-
-    padding: 12px 20px;
-
-    border-left: 2px solid transparent;
-
-    transition: 0.3s ease;
-    letter-spacing: 2px;
-
-    position: relative;
-}
-
-/* HOVER RPG */
-.menu-item:hover {
-    color: #ffffff;
-    transform: translateX(10px);
-
-    border-left: 2px solid #e6d3a3;
-
-    background: rgba(255,255,255,0.03);
-
-    text-shadow:
-        0 0 8px rgba(255,200,140,0.25);
-}
-
-/* indicador */
-.menu-item::before {
-    content: "";
-    position: absolute;
-    left: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    width: 0;
-    height: 2px;
-    background: #e6d3a3;
-
-    transition: 0.3s;
-}
-
-.menu-item:hover::before {
-    width: 10px;
-}
-
-/* ========================= */
-/* SECTIONS */
-/* ========================= */
-section {
-    padding: 90px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-/* evita links cortados no scroll */
-section {
-    scroll-margin-top: 100px;
 }
 
 /* ========================= */
@@ -190,9 +165,7 @@ section {
     padding: 20px;
     margin: 20px 0;
     border-radius: 12px;
-
     background: rgba(255,255,255,0.02);
-
     transition: 0.4s;
 }
 
@@ -202,16 +175,14 @@ section {
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* TAGS */
+/* tags */
 .tag {
     display: inline-block;
     padding: 4px 10px;
     margin: 3px;
-
     font-size: 12px;
     border: 1px solid #444;
     border-radius: 20px;
-
     color: #ccc;
 }
 
@@ -221,19 +192,16 @@ section {
 .contact-poster {
     margin-top: 20px;
     padding: 25px;
-
     border: 2px solid #5a4a2f;
     border-radius: 12px;
-
     background: linear-gradient(135deg, rgba(40,30,20,0.8), rgba(15,10,5,0.9));
 }
 
-/* LINKS */
+/* links */
 .contact-item a {
     color: #d6c7a1;
     text-decoration: none;
     border-bottom: 1px dashed #a58b5f;
-
     transition: 0.3s;
     display: inline-block;
 }
@@ -244,7 +212,17 @@ section {
 }
 
 /* ========================= */
-/* VIDEO */
+/* FOOTER */
+/* ========================= */
+.footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: #666;
+    font-size: 13px;
+}
+
+/* ========================= */
+/* VIDEOS */
 /* ========================= */
 iframe {
     width: 100%;
@@ -254,54 +232,19 @@ iframe {
 }
 
 /* ========================= */
-/* FOOTER */
-/* ========================= */
-.footer {
-    text-align: center;
-    padding: 50px 20px;
-
-    color: #666;
-    font-size: 13px;
-}
-
-/* ========================= */
-/* RESPONSIVE */
+/* 📱 MOBILE */
 /* ========================= */
 @media (max-width: 768px) {
 
     .menu-title {
-        font-size: 50px;
+        font-size: 60px;
     }
 
     .menu-item {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     iframe {
         height: 200px;
     }
-}
-.music-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-
-    padding: 10px 14px;
-    background: rgba(20,15,10,0.8);
-    border: 1px solid #5a4a2f;
-    color: #e6d3a3;
-
-    font-family: 'Cinzel', serif;
-    font-size: 12px;
-
-    border-radius: 8px;
-    cursor: pointer;
-
-    transition: 0.3s;
-    z-index: 9999;
-}
-
-.music-toggle:hover {
-    background: rgba(40,30,20,0.9);
-    transform: translateY(-2px);
 }
