@@ -191,18 +191,47 @@ nav a:hover {
 }
 
 /* LINKS (LinkedIn / Itch.io) */
+/* ========================= */
+/* LINKS (GAME UI HOVER) */
+/* ========================= */
 .contact-item a {
-    color: #f0e6c8;
+    position: relative;
+    color: #d6c7a1;
     text-decoration: none;
-    border-bottom: 1px dashed #a58b5f;
-    transition: 0.3s;
-    font-weight: 500;
+    padding: 6px 10px;
+    transition: all 0.3s ease;
     letter-spacing: 1px;
+    font-weight: 500;
 }
 
+/* linha animada */
+.contact-item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background: #e6d3a3;
+    transition: width 0.3s ease;
+}
+
+/* hover estilo UI de jogo */
 .contact-item a:hover {
     color: #ffffff;
-    border-bottom-color: white;
+
+    /* glow */
+    text-shadow:
+        0 0 5px rgba(255, 220, 150, 0.4),
+        0 0 15px rgba(255, 200, 120, 0.3);
+
+    /* leve movimento */
+    transform: translateX(3px);
+}
+
+/* underline animado */
+.contact-item a:hover::after {
+    width: 100%;
 }
 
 /* ========================= */
