@@ -1,13 +1,9 @@
-
-/* ========================= */
-/* BASE */
-/* ========================= */
-html {
-    scroll-behavior: smooth;
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
 body {
-    margin: 0;
     font-family: 'Inter', sans-serif;
     color: #eaeaea;
     overflow-x: hidden;
@@ -31,130 +27,67 @@ body::before {
         transparent 60%
     );
     pointer-events: none;
-    z-index: 0;
-}
-
-/* tudo acima do overlay */
-section, nav, .footer {
-    position: relative;
-    z-index: 2;
 }
 
 /* ========================= */
-/* TIPOGRAFIA */
-/* ========================= */
-h1, h2, h3 {
-    font-family: 'Cinzel', serif;
-    letter-spacing: 3px;
-}
-
-/* ========================= */
-/* 🎮 GAME MENU (HERO FULL SCREEN) */
+/* MAIN MENU FULL SCREEN FIX */
 /* ========================= */
 .game-menu {
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     text-align: center;
-
-    background: radial-gradient(
-        ellipse at center,
-        rgba(40,30,20,0.35) 0%,
-        rgba(10,8,6,0.95) 70%,
-        #050403 100%
-    );
-
-    overflow: hidden;
 }
 
-/* título principal */
+/* TITLE */
 .menu-title {
     font-family: 'Cinzel', serif;
-    font-size: 120px;
+    font-size: 110px;
     letter-spacing: 10px;
     color: #e6d3a3;
-    text-shadow: 0 0 25px rgba(255,200,140,0.15);
 }
 
-/* subtítulo */
 .menu-title span {
     display: block;
     font-size: 16px;
     color: #aaa;
-    letter-spacing: 3px;
     margin-top: 10px;
 }
 
-/* opções menu */
+/* MENU OPTIONS */
 .menu-options {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 15px;
 }
 
-/* item menu */
 .menu-item {
     font-size: 18px;
     color: #cfc0a0;
     text-decoration: none;
-
-    padding: 10px 20px;
-    border: 1px solid transparent;
-
-    transition: 0.3s ease;
-    letter-spacing: 2px;
+    padding: 8px 14px;
+    transition: 0.3s;
 }
 
-/* hover estilo jogo */
 .menu-item:hover {
     color: #fff;
-    border: 1px solid #5a4a2f;
-    background: rgba(255,255,255,0.03);
-
     transform: translateX(8px);
     text-shadow: 0 0 10px rgba(255,220,150,0.4);
 }
 
 /* ========================= */
-/* SEÇÕES */
+/* SECTIONS */
 /* ========================= */
 section {
     padding: 90px 20px;
     max-width: 1000px;
     margin: auto;
-}
-
-/* ========================= */
-/* NAV */
-/* ========================= */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-
-    position: fixed;
-    top: 0;
-    width: 100%;
-
-    padding: 20px;
-    background: rgba(10,10,10,0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #222;
-    z-index: 1000;
-}
-
-nav a {
-    color: #bbb;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: white;
 }
 
 /* ========================= */
@@ -166,16 +99,9 @@ nav a:hover {
     margin: 20px 0;
     border-radius: 12px;
     background: rgba(255,255,255,0.02);
-    transition: 0.4s;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    border-color: #555;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* tags */
+/* TAGS */
 .tag {
     display: inline-block;
     padding: 4px 10px;
@@ -183,47 +109,30 @@ nav a:hover {
     font-size: 12px;
     border: 1px solid #444;
     border-radius: 20px;
-    color: #ccc;
 }
 
-/* ========================= */
 /* CONTACT */
-/* ========================= */
 .contact-poster {
-    margin-top: 20px;
     padding: 25px;
     border: 2px solid #5a4a2f;
     border-radius: 12px;
-    background: linear-gradient(135deg, rgba(40,30,20,0.8), rgba(15,10,5,0.9));
+    background: rgba(40,30,20,0.8);
 }
 
-/* links */
 .contact-item a {
     color: #d6c7a1;
     text-decoration: none;
     border-bottom: 1px dashed #a58b5f;
-    transition: 0.3s;
-    display: inline-block;
 }
 
-.contact-item a:hover {
-    color: #fff;
-    transform: translateX(3px);
-}
-
-/* ========================= */
 /* FOOTER */
-/* ========================= */
 .footer {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px;
     color: #666;
-    font-size: 13px;
 }
 
-/* ========================= */
 /* VIDEOS */
-/* ========================= */
 iframe {
     width: 100%;
     height: 250px;
@@ -232,7 +141,7 @@ iframe {
 }
 
 /* ========================= */
-/* 📱 MOBILE */
+/* MOBILE */
 /* ========================= */
 @media (max-width: 768px) {
 
@@ -242,9 +151,5 @@ iframe {
 
     .menu-item {
         font-size: 16px;
-    }
-
-    iframe {
-        height: 200px;
     }
 }
