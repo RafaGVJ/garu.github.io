@@ -3,145 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Garu | Game Developer</title>
 
-<link rel="stylesheet" href="Style.css">
+<title>Garu | Game Developer• Animator</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+/* ========================= */
+/* BASE */
+/* ========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #eaeaea;
+    background: radial-gradient(circle at top, #1c1612, #0d0b09, #050403);
+}
+
+/* ========================= */
+/* NAV */
+/* ========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    padding: 18px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #222;
+    z-index: 1000;
+}
+
+nav a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* ========================= */
+/* HERO (MAIOR) */
+/* ========================= */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 140px;
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 10px;
+}
+
+.hero p {
+    color: #aaa;
+    font-size: 20px;
+}
+
+/* ========================= */
+/* SECTIONS */
+/* ========================= */
+
+section {
+    padding: 120px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ========================= */
+/* CARDS */
+/* ========================= */
+
+.card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* ========================= */
+/* VIDEO */
+/* ========================= */
+
+iframe {
+    width: 100%;
+    height: 320px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* ========================= */
+/* MUSIC BUTTON */
+/* ========================= */
+
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 10px 15px;
+    background: rgba(0,0,0,0.7);
+    border: 1px solid #444;
+    color: #c9b37a;
+    cursor: pointer;
+
+    border-radius: 8px;
+    z-index: 2000;
+
+    transition: 0.3s;
+}
+
+.music-btn:hover {
+    transform: scale(1.05);
+    border-color: #c9b37a;
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- ========================= -->
-<!-- 🎮 MAIN MENU -->
-<!-- ========================= -->
-<section class="game-menu">
+<!-- 🎵 MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="medieval-ambient.mp3" type="audio/mpeg">
+</audio>
 
-    <div class="menu-title">
-        GARU
-        <span>Game Developer • Animator </span>
-    </div>
+<!-- 🎮 PLAY MUSIC BUTTON -->
+<button class="music-btn" onclick="document.getElementById('bgMusic').play()">
+    ▶ Play Music
+</button>
 
-    <div class="menu-options">
-        <a class="menu-item" href="#showreel">⚔ Showreel</a>
-        <a class="menu-item" href="#projects">⚔ Projects</a>
-        <a class="menu-item" href="#skills">⚔ Skills</a>
-        <a class="menu-item" href="#about">⚔ About</a>
-        <a class="menu-item" href="#contact">⚔ Contact</a>
-    </div>
+<!-- NAV -->
+<nav>
+    <a href="#home">Start</a>
+    <a href="#showreel">Showreel</a>
+    <a href="#projects">Projects</a>
+</nav>
 
+<!-- HERO -->
+<section id="home" class="hero">
+    <h1>GARU</h1>
+    <p>Game Developer • Animator</p>
 </section>
 
-<!-- ========================= -->
 <!-- SHOWREEL -->
-<!-- ========================= -->
 <section id="showreel">
     <h2>Showreel</h2>
-
     <div class="card">
         <iframe src="https://www.youtube.com/embed/SEU_SHOWREEL_ID" allowfullscreen></iframe>
     </div>
 </section>
 
-<!-- ========================= -->
 <!-- PROJECTS -->
-<!-- ========================= -->
 <section id="projects">
 <h2>Projects</h2>
 
 <div class="card">
-    <h3>2D Platformer Prototype</h3>
-    <iframe src="https://www.youtube.com/embed/BGmOsk9fCFk" allowfullscreen></iframe>
-    <p>Unity, C#, Level Design</p>
+    <h3>2D Platformer</h3>
+    <iframe src="https://www.youtube.com/embed/BGmOsk9fCFk"></iframe>
 </div>
 
 <div class="card">
     <h3>Jester</h3>
-    <iframe src="https://www.youtube.com/embed/fC5_dm4_tV8" allowfullscreen></iframe>
-    <p>Sound Design, Game Design</p>
-</div>
-
-<div class="card">
-    <h3>V1rus</h3>
-    <iframe src="https://www.youtube.com/embed/ZoPqvpx9r8w" allowfullscreen></iframe>
-    <p>Sound Design</p>
+    <iframe src="https://www.youtube.com/embed/fC5_dm4_tV8"></iframe>
 </div>
 
 </section>
-
-<!-- ========================= -->
-<!-- SKILLS -->
-<!-- ========================= -->
-<section id="skills">
-<h2>Skills</h2>
-
-<div class="card">
-    <h3>Game Development</h3>
-    <span class="tag">Unity</span>
-    <span class="tag">Unreal</span>
-    <span class="tag">C#</span>
-    <span class="tag">Blueprints</span>
-    
-</div>
-
-<div class="card">
-    <h3>Animation</h3>
-    <span class="tag">Blender</span>
-    <span class="tag">Character Animation</span>
-</div>
-
-<div class="card">
-    <h3>Design</h3>
-    <span class="tag">Level Design</span>
-    <span class="tag">UI/UX</span>
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- ABOUT -->
-<!-- ========================= -->
-<section id="about">
-<h2>About</h2>
-
-<div class="card">
-    <p>
-        Game developer and animator focused on immersive worlds and gameplay systems.
-    </p>
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- CONTACT -->
-<!-- ========================= -->
-<section id="contact">
-<h2>Contact</h2>
-
-<div class="contact-poster">
-
-    <div class="contact-title">✦ SEEK THE CREATOR ✦</div>
-
-    <div class="contact-item">📧 rafaelguerreiro.exe@gmail.com</div>
-
-    <div class="contact-item">
-        🔗 <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-    </div>
-
-    <div class="contact-item">
-        🔗 <a href="https://itch.io/" target="_blank">Itch.io</a>
-    </div>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- FOOTER -->
-<!-- ========================= -->
-<div class="footer">
-© 2026 Garu — Game Developer & Animator
-</div>
 
 </body>
 </html>
