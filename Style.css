@@ -1,5 +1,5 @@
 /* ========================= */
-/* BASE DO SITE */
+/* BASE */
 /* ========================= */
 html {
     scroll-behavior: smooth;
@@ -19,7 +19,7 @@ body {
     );
 }
 
-/* LUZ AMBIENTE */
+/* LIGHT AMBIENT */
 body::before {
     content: "";
     position: fixed;
@@ -33,7 +33,7 @@ body::before {
     z-index: 0;
 }
 
-/* garantir layering correto */
+/* garantir camadas corretas */
 section, nav, .game-menu, .card, .contact-poster {
     position: relative;
     z-index: 2;
@@ -48,7 +48,7 @@ h1, h2, h3 {
 }
 
 /* ========================= */
-/* NAV (caso ainda uses scroll nav) */
+/* NAVBAR */
 /* ========================= */
 nav {
     display: flex;
@@ -78,22 +78,23 @@ nav a:hover {
 }
 
 /* ========================= */
-/* 🎮 GAME MENU (RPG HOME) */
+/* 🎮 GAME MENU (HOME RPG UI) */
 /* ========================= */
-
 .game-menu {
-    height: 100vh;
+    min-height: 100vh;   /* IMPORTANTE: evita quebra */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    padding: 80px 20px;
 }
 
 /* TITULO */
 .menu-title {
     font-family: 'Cinzel', serif;
-    font-size: 80px;
+    font-size: 70px;
     letter-spacing: 10px;
 
     color: #e6d3a3;
@@ -111,7 +112,7 @@ nav a:hover {
     margin-top: 10px;
 }
 
-/* OPTIONS */
+/* MENU OPTIONS */
 .menu-options {
     margin-top: 60px;
     display: flex;
@@ -119,7 +120,7 @@ nav a:hover {
     gap: 15px;
 }
 
-/* ITEM */
+/* MENU ITEM */
 .menu-item {
     font-size: 20px;
     color: #cfc6b2;
@@ -135,7 +136,7 @@ nav a:hover {
     position: relative;
 }
 
-/* HOVER RPG STYLE */
+/* HOVER RPG */
 .menu-item:hover {
     color: #ffffff;
     transform: translateX(10px);
@@ -148,7 +149,7 @@ nav a:hover {
         0 0 8px rgba(255,200,140,0.25);
 }
 
-/* indicador lateral */
+/* indicador */
 .menu-item::before {
     content: "";
     position: absolute;
@@ -174,6 +175,11 @@ section {
     padding: 90px 20px;
     max-width: 1000px;
     margin: auto;
+}
+
+/* evita links cortados no scroll */
+section {
+    scroll-margin-top: 100px;
 }
 
 /* ========================= */
@@ -256,4 +262,22 @@ iframe {
 
     color: #666;
     font-size: 13px;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px) {
+
+    .menu-title {
+        font-size: 50px;
+    }
+
+    .menu-item {
+        font-size: 18px;
+    }
+
+    iframe {
+        height: 200px;
+    }
 }
