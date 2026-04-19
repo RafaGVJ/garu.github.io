@@ -13,32 +13,21 @@
 <body>
 
 <!-- ========================= -->
-<!-- 🎵 MUSIC -->
-<!-- ========================= -->
-<audio id="bg-music" loop>
-    <source src="music/ambient-medieval.mp3" type="audio/mpeg">
-</audio>
-
-<button class="music-toggle" onclick="toggleMusic()">
-    🎵 Music: OFF
-</button>
-
-<!-- ========================= -->
-<!-- 🎮 GAME MENU -->
+<!-- 🎮 MAIN MENU -->
 <!-- ========================= -->
 <section class="game-menu">
 
     <div class="menu-title">
         GARU
-        <span>Game Developer • Animator • World Builder</span>
+        <span>Game Developer • Animator </span>
     </div>
 
     <div class="menu-options">
-        <a class="menu-item" href="#showreel">▶ Start Showreel</a>
+        <a class="menu-item" href="#showreel">⚔ Showreel</a>
         <a class="menu-item" href="#projects">⚔ Projects</a>
-        <a class="menu-item" href="#skills">📊 Skills</a>
-        <a class="menu-item" href="#about">✦ About</a>
-        <a class="menu-item" href="#contact">☍ Contact</a>
+        <a class="menu-item" href="#skills">⚔ Skills</a>
+        <a class="menu-item" href="#about">⚔ About</a>
+        <a class="menu-item" href="#contact">⚔ Contact</a>
     </div>
 
 </section>
@@ -63,38 +52,19 @@
 <div class="card">
     <h3>2D Platformer Prototype</h3>
     <iframe src="https://www.youtube.com/embed/BGmOsk9fCFk" allowfullscreen></iframe>
-
-    <div class="tags">
-        <span class="tag">Programming</span>
-        <span class="tag">Game Design</span>
-        <span class="tag">Level Design</span>
-    </div>
-
-    <p>Tools: Unity, C#, Audacity</p>
+    <p>Unity, C#, Level Design</p>
 </div>
 
 <div class="card">
     <h3>Jester</h3>
     <iframe src="https://www.youtube.com/embed/fC5_dm4_tV8" allowfullscreen></iframe>
-
-    <div class="tags">
-        <span class="tag">Sound Designer</span>
-        <span class="tag">Game Designer</span>
-        <span class="tag">Programming</span>
-    </div>
-
-    <p>Tools: Unity, C#, Audacity</p>
+    <p>Sound Design, Game Design</p>
 </div>
 
 <div class="card">
     <h3>V1rus</h3>
     <iframe src="https://www.youtube.com/embed/ZoPqvpx9r8w" allowfullscreen></iframe>
-
-    <div class="tags">
-        <span class="tag">Sound Designer</span>
-    </div>
-
-    <p>Tools: Audacity</p>
+    <p>Sound Design</p>
 </div>
 
 </section>
@@ -108,8 +78,10 @@
 <div class="card">
     <h3>Game Development</h3>
     <span class="tag">Unity</span>
+    <span class="tag">Unreal</span>
     <span class="tag">C#</span>
-    <span class="tag">Systems</span>
+    <span class="tag">Blueprints</span>
+    
 </div>
 
 <div class="card">
@@ -134,8 +106,7 @@
 
 <div class="card">
     <p>
-        Game developer and animator focused on immersive worlds,
-        gameplay systems and expressive animation.
+        Game developer and animator focused on immersive worlds and gameplay systems.
     </p>
 </div>
 
@@ -154,15 +125,11 @@
     <div class="contact-item">📧 rafaelguerreiro.exe@gmail.com</div>
 
     <div class="contact-item">
-        🔗 <a href="https://www.linkedin.com/in/rafael-guerreiro-gamedev-anim/" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-        </a>
+        🔗 <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
     </div>
 
     <div class="contact-item">
-        🔗 <a href="https://garu-rg.itch.io/" target="_blank" rel="noopener noreferrer">
-            Itch.io
-        </a>
+        🔗 <a href="https://itch.io/" target="_blank">Itch.io</a>
     </div>
 
 </div>
@@ -175,26 +142,6 @@
 <div class="footer">
 © 2026 Garu — Game Developer & Animator
 </div>
-
-<!-- ========================= -->
-<!-- MUSIC SCRIPT -->
-<!-- ========================= -->
-<script>
-let music = document.getElementById("bg-music");
-let isPlaying = false;
-
-function toggleMusic() {
-    if (!isPlaying) {
-        music.play();
-        isPlaying = true;
-        document.querySelector(".music-toggle").innerText = "🎵 Music: ON";
-    } else {
-        music.pause();
-        isPlaying = false;
-        document.querySelector(".music-toggle").innerText = "🎵 Music: OFF";
-    }
-}
-</script>
 
 </body>
 </html>
