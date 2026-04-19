@@ -1,41 +1,58 @@
-html, body {
-    height: 100%;
-    margin: 0;
+/* ========================= */
+/* BASE */
+/* ========================= */
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
+    margin: 0;
     font-family: 'Inter', sans-serif;
     color: #eaeaea;
+
+    background: radial-gradient(circle at top, #1c1612, #0d0b09, #050403);
     overflow-x: hidden;
-
-    background: radial-gradient(
-        ellipse at top,
-        #1c1612 0%,
-        #0d0b09 55%,
-        #060504 100%
-    );
 }
 
-/* luz ambiente */
-body::before {
-    content: "";
+/* ========================= */
+/* NAV */
+/* ========================= */
+
+nav {
     position: fixed;
-    inset: 0;
-    background: radial-gradient(
-        circle at 50% 30%,
-        rgba(255, 200, 140, 0.10),
-        transparent 60%
-    );
-    pointer-events: none;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    padding: 18px;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #222;
+    z-index: 1000;
+}
+
+nav a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 /* ========================= */
-/* MAIN MENU FULL SCREEN FIX */
+/* HERO (MUITO MAIOR - GAME INTRO) */
 /* ========================= */
-.game-menu {
-    min-height: 100vh;
-    width: 100%;
 
+.hero {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,112 +61,159 @@ body::before {
     text-align: center;
 }
 
-/* TITLE */
-.menu-title {
+.hero h1 {
+    font-size: 150px;
+    margin: 0;
     font-family: 'Cinzel', serif;
-    font-size: 110px;
-    letter-spacing: 10px;
-    color: #e6d3a3;
+    letter-spacing: 12px;
+
+    text-shadow:
+        0 0 10px rgba(255,200,140,0.15),
+        0 0 30px rgba(255,200,140,0.08);
 }
 
-.menu-title span {
-    display: block;
-    font-size: 16px;
+.hero p {
+    font-size: 20px;
     color: #aaa;
     margin-top: 10px;
-}
-
-/* MENU OPTIONS */
-.menu-options {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.menu-item {
-    font-size: 18px;
-    color: #cfc0a0;
-    text-decoration: none;
-    padding: 8px 14px;
-    transition: 0.3s;
-}
-
-.menu-item:hover {
-    color: #fff;
-    transform: translateX(8px);
-    text-shadow: 0 0 10px rgba(255,220,150,0.4);
+    letter-spacing: 2px;
 }
 
 /* ========================= */
 /* SECTIONS */
 /* ========================= */
+
 section {
-    padding: 90px 20px;
-    max-width: 1000px;
+    padding: 120px 20px;
+    max-width: 1100px;
     margin: auto;
 }
 
+h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
 /* ========================= */
-/* CARDS */
+/* CARDS (UI RPG STYLE) */
 /* ========================= */
+
 .card {
+    background: rgba(255,255,255,0.03);
     border: 1px solid #2a2a2a;
     padding: 20px;
-    margin: 20px 0;
     border-radius: 12px;
-    background: rgba(255,255,255,0.02);
+
+    margin-bottom: 20px;
+    transition: 0.3s;
+
+    box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
-/* TAGS */
-.tag {
-    display: inline-block;
-    padding: 4px 10px;
-    margin: 3px;
-    font-size: 12px;
-    border: 1px solid #444;
-    border-radius: 20px;
+/* hover estilo UI de jogo */
+.card:hover {
+    transform: translateY(-10px) scale(1.01);
+    border-color: #c9b37a;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.5),
+        0 0 20px rgba(201,179,122,0.15);
 }
 
-/* CONTACT */
-.contact-poster {
-    padding: 25px;
-    border: 2px solid #5a4a2f;
-    border-radius: 12px;
-    background: rgba(40,30,20,0.8);
-}
+/* ========================= */
+/* VIDEO */
+/* ========================= */
 
-.contact-item a {
-    color: #d6c7a1;
-    text-decoration: none;
-    border-bottom: 1px dashed #a58b5f;
-}
-
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 40px;
-    color: #666;
-}
-
-/* VIDEOS */
 iframe {
     width: 100%;
-    height: 250px;
+    height: 320px;
     border-radius: 10px;
     border: none;
 }
 
 /* ========================= */
-/* MOBILE */
+/* MUSIC BUTTON (UI GAME STYLE) */
 /* ========================= */
+
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 12px 16px;
+
+    background: rgba(0,0,0,0.75);
+    border: 1px solid #444;
+    color: #c9b37a;
+
+    cursor: pointer;
+    border-radius: 8px;
+
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+    z-index: 2000;
+}
+
+.music-btn:hover {
+    transform: scale(1.08);
+    border-color: #c9b37a;
+    box-shadow: 0 0 15px rgba(201,179,122,0.2);
+}
+
+/* ========================= */
+/* CONTACT LINKS */
+/* ========================= */
+
+.contact a {
+    color: #c9b37a;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact a:hover {
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 13px;
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
 @media (max-width: 768px) {
 
-    .menu-title {
-        font-size: 60px;
-    }
+.hero h1 {
+    font-size: 80px;
+}
 
-    .menu-item {
-        font-size: 16px;
-    }
+.hero p {
+    font-size: 16px;
+}
+
+iframe {
+    height: 220px;
+}
+
+nav {
+    gap: 12px;
+    font-size: 12px;
+}
+
+section {
+    padding: 80px 15px;
+}
+
 }
