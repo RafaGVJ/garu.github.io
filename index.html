@@ -5,175 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Garu | Game Developer</title>
 
+<!-- LINK PARA O CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- FONTES -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
-<style>
-/* ========================= */
-/* BASE DO SITE */
-/* ========================= */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    color: #eaeaea;
-    overflow-x: hidden;
-    padding-top: 70px;
-
-    background: radial-gradient(
-        ellipse at top,
-        #1c1612 0%,
-        #0d0b09 55%,
-        #060504 100%
-    );
-}
-
-/* LUZ AMBIENTE */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(
-        circle at 50% 30%,
-        rgba(255, 200, 140, 0.10),
-        transparent 60%
-    );
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* CONTENT ABOVE OVERLAY */
-section, nav, .hero, .card, .contact-poster {
-    position: relative;
-    z-index: 2;
-}
-
-/* TIPOGRAFIA */
-h1, h2, h3 {
-    font-family: 'Cinzel', serif;
-    letter-spacing: 3px;
-}
-
-/* SECTIONS */
-section {
-    padding: 90px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-/* NAV */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px;
-
-    background: rgba(10,10,10,0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #222;
-    z-index: 1000;
-}
-
-nav a {
-    color: #bbb;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: white;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 160px 20px;
-}
-
-.hero h1 {
-    font-size: 110px;
-    margin: 0;
-    letter-spacing: 8px;
-}
-
-.hero p {
-    font-size: 18px;
-    color: #aaa;
-}
-
-/* CARDS */
-.card {
-    border: 1px solid #2a2a2a;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.02);
-    transition: 0.4s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    border-color: #555;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* TAGS */
-.tag {
-    display: inline-block;
-    padding: 4px 10px;
-    margin: 3px;
-    font-size: 12px;
-    border: 1px solid #444;
-    border-radius: 20px;
-    color: #ccc;
-}
-
-/* CONTACT */
-.contact-poster {
-    margin-top: 20px;
-    padding: 25px;
-    border: 2px solid #5a4a2f;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(40,30,20,0.8), rgba(15,10,5,0.9));
-    position: relative;
-}
-
-/* LINKS */
-.contact-item a {
-    color: #d6c7a1;
-    text-decoration: none;
-    border-bottom: 1px dashed #a58b5f;
-    transition: 0.3s;
-    display: inline-block;
-}
-
-.contact-item a:hover {
-    color: #fff;
-    transform: translateX(3px);
-}
-
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 50px 20px;
-    color: #666;
-    font-size: 13px;
-}
-
-/* VIDEO */
-iframe {
-    width: 100%;
-    height: 250px;
-    border-radius: 10px;
-    border: none;
-}
-</style>
 </head>
 
 <body>
@@ -192,7 +28,9 @@ iframe {
 
 <section id="showreel">
     <h2>Showreel</h2>
-    <iframe src="https://www.youtube.com/embed/BGmOsk9fCFk" allowfullscreen></iframe>
+    <div class="card">
+        <iframe src="https://www.youtube.com/embed/SEU_SHOWREEL_ID"></iframe>
+    </div>
 </section>
 
 <section id="projects">
@@ -200,33 +38,12 @@ iframe {
 
 <div class="card">
     <h3>2D Platformer Prototype</h3>
-    <iframe src="https://www.youtube.com/embed/BGmOsk9fCFk" allowfullscreen></iframe>
-    <div class="tags">
-        <span class="tag">Programming</span>
-        <span class="tag">Game Design</span>
-        <span class="tag">Level Design</span>
-    </div>
-    <p>Tools: Unity, C#, Audacity</p>
+    <iframe src="https://www.youtube.com/embed/BGmOsk9fCFk"></iframe>
 </div>
 
 <div class="card">
     <h3>Jester</h3>
-    <iframe src="https://www.youtube.com/embed/fC5_dm4_tV8" allowfullscreen></iframe>
-    <div class="tags">
-        <span class="tag">Sound Designer</span>
-        <span class="tag">Assistant Programmer</span>
-        <span class="tag">Game Designer</span>
-    </div>
-    <p>Tools: Unity, C#, Audacity</p>
-</div>
-
-<div class="card">
-    <h3>V1rus</h3>
-    <iframe src="https://www.youtube.com/embed/ZoPqvpx9r8w" allowfullscreen></iframe>
-    <div class="tags">
-        <span class="tag">Sound Designer</span>
-    </div>
-    <p>Tools: Audacity</p>
+    <iframe src="https://www.youtube.com/embed/fC5_dm4_tV8"></iframe>
 </div>
 
 </section>
@@ -242,25 +59,21 @@ iframe {
 <div class="contact-poster">
     <div>✦ SEEK THE CREATOR ✦</div>
 
-    <div class="contact-item">📧 email: rafaelguerreiro.exe@gmail.com</div>
+    <div>📧 rafaelguerreiro.exe@gmail.com</div>
 
-    <div class="contact-item">
-        🔗 <a href="https://www.linkedin.com/in/rafael-guerreiro-gamedev-anim/" target="_blank" rel="noopener noreferrer">
-        LinkedIn
-        </a>
+    <div>
+        🔗 <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
     </div>
 
-    <div class="contact-item">
-        🔗 <a href="https://garu-rg.itch.io/" target="_blank" rel="noopener noreferrer">
-        Itch.io
-        </a>
+    <div>
+        🔗 <a href="https://itch.io/" target="_blank">Itch.io</a>
     </div>
 </div>
 
 </section>
 
 <div class="footer">
-© 2026 Garu — Game Developer & Animator
+© 2026 Garu
 </div>
 
 </body>
