@@ -281,3 +281,27 @@ iframe {
         height: 200px;
     }
 }
+.music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 10px 14px;
+    background: rgba(20,15,10,0.8);
+    border: 1px solid #5a4a2f;
+    color: #e6d3a3;
+
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.music-toggle:hover {
+    background: rgba(40,30,20,0.9);
+    transform: translateY(-2px);
+}
